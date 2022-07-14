@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="slide.js"></script>
+    <link id="style" rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
     <title>Instagram</title>
 </head>
 <body>
+    <div class="box-btn-tema">
+        <input type="button" id="btn-tema" onclick="tema()" value="Tema Escuro"/>
+    </div>
     <div class="instagram-wrapper">
         <div class="instagram-phone">
             
@@ -25,7 +28,7 @@
                 <a href="#" class="instagram-logout">Remover conta</a>
             </div>
             <div class="group">
-                <p class="not-account">Não é sprucegabriela?</p>
+                <p class="not-account">Não é SergioAbreuSousa</p>
                 <p class="not-account">
                     <span class="link-blue">Alternar contas</span>
                     ou
@@ -35,8 +38,8 @@
             <div class="get-the-app">
                 <p class="get-app">Obtenha o aplicativo.</p>
                 <div class="download">
-                    <a href="#" class="app-download"></a>
-                    <a href="#" class="app-download"></a>
+                    <a href="https://apps.apple.com/br/app/instagram/id389801252" class="app-download"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=pt_BR&gl=US" class="app-download"></a>
                 </div>
             </div>
         </div>
@@ -44,28 +47,79 @@
     <footer>
         <div class="rodape">
             <a href="https://about.facebook.com/meta"><div class="links-rodape"><p>Meta</p></div></a>
-            <a href=""><div class="links-rodape"><p>Sobre</p></div></a>
-            <a href=""><div class="links-rodape"><p>Blog</p></div></a>
-            <a href=""><div class="links-rodape"><p>Carreiras</p></div></a>
-            <a href=""><div class="links-rodape"><p>Ajuda</p></div></a>
-            <a href=""><div class="links-rodape"><p>API</p></div></a>
-            <a href=""><div class="links-rodape"><p>Privacidade</p></div></a>
-            <a href=""><div class="links-rodape"><p>Termos</p></div></a>
-            <a href=""><div class="links-rodape"><p>Principais contas</p></div></a>
-            <a href=""><div class="links-rodape"><p>Hashtags</p></div></a>
-            <a href=""><div class="links-rodape"><p>Localizações</p></div></a>
-            <a href=""><div class="links-rodape"><p>Instagram Lite</p></div></a>
-            <a href=""><div class="links-rodape"><p>Carregamento de contato e não usuários</p></div></a>
+            <a href="https://about.instagram.com/"><div class="links-rodape"><p>Sobre</p></div></a>
+            <a href="https://about.instagram.com/blog/"><div class="links-rodape"><p>Blog</p></div></a>
+            <a href="https://www.instagram.com/about/jobs/"><div class="links-rodape"><p>Carreiras</p></div></a>
+            <a href="https://help.instagram.com/"><div class="links-rodape"><p>Ajuda</p></div></a>
+            <a href="https://developers.facebook.com/docs/instagram"><div class="links-rodape"><p>API</p></div></a>
+            <a href="https://www.instagram.com/legal/privacy/"><div class="links-rodape"><p>Privacidade</p></div></a>
+            <a href="https://www.instagram.com/legal/terms/"><div class="links-rodape"><p>Termos</p></div></a>
+            <a href="https://www.instagram.com/directory/profiles/"><div class="links-rodape"><p>Principais contas</p></div></a>
+            <a href="https://www.instagram.com/directory/hashtags/"><div class="links-rodape"><p>Hashtags</p></div></a>
+            <a href="https://www.instagram.com/explore/locations/"><div class="links-rodape"><p>Localizações</p></div></a>
+            <a href="https://www.instagram.com/web/lite/"><div class="links-rodape"><p>Instagram Lite</p></div></a>
+            <a href="https://www.facebook.com/help/instagram/261704639352628"><div class="links-rodape"><p>Carregamento de contato e não usuários</p></div></a>
         </div>
         <div class="rodape">
-            <a href=""><div class="links-rodape"><p>Dança</p></div></a>
-            <a href=""><div class="links-rodape"><p>Comida e bebida</p></div></a>
-            <a href=""><div class="links-rodape"><p>Casa e jardim</p></div></a>
-            <a href=""><div class="links-rodape"><p>Música</p></div></a>
-            <a href=""><div class="links-rodape"><p>Artes visuais</p></div></a>
+            <a href="https://www.instagram.com/topics/dance-and-performance/"><div class="links-rodape"><p>Dança</p></div></a>
+            <a href="https://www.instagram.com/topics/food-and-drink/"><div class="links-rodape"><p>Comida e bebida</p></div></a>
+            <a href="https://www.instagram.com/topics/home-and-garden/"><div class="links-rodape"><p>Casa e jardim</p></div></a>
+            <a href="https://www.instagram.com/topics/music/"><div class="links-rodape"><p>Música</p></div></a>
+            <a href="https://www.instagram.com/topics/visual-arts/"><div class="links-rodape"><p>Artes visuais</p></div></a>
         </div>
         <div class="rodape">
-            <div class="links-rodape"><p>© 2022 Instagram from Meta</p></div>
+            <select id="idiomas">
+                  <option value="af">Afrikaans</option>
+                  <option value="cs">Čeština</option>
+                  <option value="da">Dansk</option>
+                  <option value="de">Deutsch</option>
+                  <option value="el">Ελληνικά</option>
+                  <option value="en">English</option>
+                  <option value="en-gb">English (UK)</option>
+                  <option value="es">Español (España)</option>
+                  <option value="es-la">Español</option>
+                  <option value="fi">Suomi</option>
+                  <option value="fr">Français</option>
+                  <option value="id">Bahasa Indonesia</option>
+                  <option value="it">Italiano</option>
+                  <option value="ja">日本語</option>
+                  <option value="ko">한국어</option>
+                  <option value="ms">Bahasa Melayu</option>
+                  <option value="nb">Norsk</option>
+                  <option value="nl">Nederlands</option>
+                  <option value="pl">Polski</option>
+                  <option value="pt-br">Português (Brasil)</option>
+                  <option value="pt">Português (Portugal)</option>
+                  <option value="ru">Русский</option>
+                  <option value="sv">Svenska</option>
+                  <option value="th">ภาษาไทย</option>
+                  <option value="tl">Filipino</option>
+                  <option value="tr">Türkçe</option>
+                  <option value="zh-cn">中文(简体)</option>
+                  <option value="zh-tw">中文(台灣)</option>
+                  <option value="bn">বাংলা</option>
+                  <option value="gu">ગુજરાતી</option>
+                  <option value="hi">हिन्दी</option>
+                  <option value="hr">Hrvatski</option>
+                  <option value="hu">Magyar</option>
+                  <option value="kn">ಕನ್ನಡ</option>
+                  <option value="ml">മലയാളം</option>
+                  <option value="mr">मराठी</option>
+                  <option value="ne">नेपाली</option>
+                  <option value="pa">ਪੰਜਾਬੀ</option>
+                  <option value="si">සිංහල</option>
+                  <option value="sk">Slovenčina</option>
+                  <option value="ta">தமிழ்</option>
+                  <option value="te">తెలుగు</option>
+                  <option value="vi">Tiếng Việt</option>
+                  <option value="zh-hk">中文(香港)</option>
+                  <option value="bg">Български</option>
+                  <option value="fr-ca">Français (Canada)</option>
+                  <option value="ro">Română</option>
+                  <option value="sr">Српски</option>
+                  <option value="uk">Українська</option>
+            </select>
+            <div class="links-rodape direitos"><p>© 2022 Instagram from Meta</p></div>
         </div>
     </footer>
 </body>
