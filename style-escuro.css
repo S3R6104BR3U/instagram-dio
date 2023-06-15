@@ -30,10 +30,9 @@ body {
 
 .instagram-phone {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 50%;
-    margin-top: 50px;
+    margin-top: 80px;
     margin-right: 25px;
 }
 
@@ -164,8 +163,8 @@ body {
 .prints {
     display: flex;
     position: absolute;
-    top: 80px;
     margin-left: 95px;
+    margin-top: 22px;
 }
 
 .prints img{
